@@ -65,7 +65,7 @@ public class HomeFragment extends Fragment implements CardStackListener {
                 swipeCard(Direction.Left));
 
         NewsRepository repository = new NewsRepository(getContext());
-        HomeViewModel viewModel = new ViewModelProvider(this, new NewsViewModelFactory(repository))
+        viewModel = new ViewModelProvider(this, new NewsViewModelFactory(repository))
                 .get(HomeViewModel.class);
         viewModel.setCountryInput("us");
         viewModel
